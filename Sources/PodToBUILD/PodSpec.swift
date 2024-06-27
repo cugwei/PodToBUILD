@@ -321,7 +321,8 @@ public enum PodSpecSource {
             }
             return .http(url: httpURL)
         } else {
-            fatalError("Unsupported source for PodSpec - \(dict)")
+            // fatalError("Unsupported source for PodSpec - \(dict)")
+	    return .http(url: "http://fake.com")
         }
     }
 }
